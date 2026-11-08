@@ -2,48 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- ตั้งค่าให้เหมาะกับหน้าจอมือถือ ห้ามซูม -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>My Sandbox RPG</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #222;
-            overflow: hidden; /* ซ่อนแถบเลื่อน */
-            touch-action: none; /* ป้องกันการปัดหน้าจอแล้วเด้ง */
-        }
-        canvas {
-            display: block;
-        }
-        /* ปุ่มขุดดินทำฟาร์มบนหน้าจอ */
-        #actionBtn {
-            position: absolute;
-            bottom: 30px;
-            right: 30px;
-            width: 80px;
-            height: 80px;
-            background-color: rgba(255, 255, 255, 0.7);
-            border: 2px solid #333;
-            border-radius: 50%;
-            font-size: 24px;
-            font-weight: bold;
-            color: #333;
-            z-index: 10;
-        }
-        #actionBtn:active {
-            background-color: rgba(200, 200, 200, 0.9);
-        }
-    </style>
+    <title>Farmster - Sandbox RPG</title>
+    <!-- เรียกใช้ไฟล์ตกแต่งหน้าจอ -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <!-- พื้นที่แสดงภาพเกม -->
+    <!-- ผืนผ้าใบสำหรับวาดเกม -->
     <canvas id="gameCanvas"></canvas>
     
-    <!-- ปุ่มกดทำฟาร์ม -->
-    <button id="actionBtn">ขุดดิน</button>
+    <!-- ปุ่มกดแอคชั่น -->
+    <div id="ui-container">
+        <button id="actionBtn">ขุดดิน</button>
+    </div>
 
-    <script src="game.js"></script>
+    <!-- เรียกใช้ไฟล์ระบบเกมจากโฟลเดอร์ src -->
+    <script src="src/main.js"></script>
 </body>
 </html>
